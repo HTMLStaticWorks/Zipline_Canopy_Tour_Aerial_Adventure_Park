@@ -264,29 +264,30 @@ a:focus {
   .navbar-nav .nav-link {
     padding: 10px 0;
   }
+
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column !important;
+    gap: 10px;
+    margin-bottom: 20px !important;
+  }
+
+  .navbar-expand-lg .navbar-collapse .d-flex {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 15px !important;
+  }
+
+  .navbar-expand-lg .btn-nav {
+    width: 100%;
+    height: 50px;
+    display: flex !important;
+  }
+
+  .navbar-toggler {
+    display: block !important;
+  }
 }
 
-.navbar-expand-lg .navbar-nav {
-  flex-direction: column !important;
-  gap: 10px;
-  margin-bottom: 20px !important;
-}
-
-.navbar-expand-lg .navbar-collapse .d-flex {
-  flex-direction: column;
-  align-items: stretch !important;
-  gap: 15px !important;
-}
-
-.navbar-expand-lg .btn-nav {
-  width: 100%;
-  height: 50px;
-  display: flex !important;
-}
-
-.navbar-toggler {
-  display: block !important;
-}
 
 
 .navbar-toggler {
@@ -411,39 +412,54 @@ a:focus {
 }
 
 .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.dropdown:has(.dropdown-item.active) > .nav-link {
   color: var(--zl-primary) !important;
 }
 
-/* Home highlight logic */
 .navbar-nav .dropdown-item.active {
   background-color: var(--zl-primary) !important;
   color: #fff !important;
+  font-weight: 600;
 }
 
-.navbar-nav .nav-item.dropdown:has(.dropdown-item.active)>.nav-link {
-  color: var(--zl-primary) !important;
+/* Dropdown Styling */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown-menu {
+    border-radius: var(--zl-border-radius);
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    box-shadow: var(--zl-shadow-hover);
+    animation: dropdownFadeIn 0.3s ease;
+  }
+
+  @keyframes dropdownFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .navbar-nav .dropdown-item {
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: 500;
+    transition: var(--zl-transition);
+  }
+
+  .navbar-nav .dropdown-item:hover {
+    background-color: var(--zl-light);
+    color: var(--zl-primary);
+    padding-left: 20px;
+  }
 }
 
-.navbar-nav .nav-item.dropdown:has(.dropdown-item.active)>.nav-link::after {
-  width: 100% !important;
-}
-
-.navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--zl-secondary);
-  transition: var(--zl-transition);
-}
-
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-  width: 100%;
-}
 
 /* Adventures Blue Color Fix */
 .badge.bg-info,
