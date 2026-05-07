@@ -1,0 +1,155 @@
+/* ==========================================================================
+   Dark Mode Overrides
+   ========================================================================== */
+
+[data-theme="dark"] {
+  --zl-body-bg: #000000;
+  --zl-body-color: #e2e8f0;
+  --zl-heading-color: #ffffff;
+  --zl-border-color: #333333;
+  --zl-light: #111111;
+  --zl-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --zl-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+[data-theme="dark"] .text-muted {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .text-white-50 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-theme="dark"] .section-padding,
+[data-theme="dark"] section {
+  background-color: var(--zl-body-bg) !important;
+}
+
+[data-theme="dark"] .table {
+  color: var(--zl-heading-color) !important;
+  border-color: var(--zl-border-color) !important;
+}
+
+[data-theme="dark"] .table thead.bg-primary {
+  background-color: var(--zl-primary-dark) !important;
+}
+
+[data-theme="dark"] .table-bordered td, 
+[data-theme="dark"] .table-bordered th {
+  border-color: var(--zl-border-color) !important;
+}
+
+[data-theme="dark"] .form-control::placeholder,
+[data-theme="dark"] .form-select::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="dark"] .footer {
+  background-color: #000000 !important;
+}
+
+[data-theme="dark"] .card-service,
+[data-theme="dark"] .card,
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .booking-summary,
+[data-theme="dark"] .mb-5.bg-white,
+[data-theme="dark"] .p-4.bg-white {
+  background-color: #111111 !important;
+  border-color: var(--zl-border-color) !important;
+  color: var(--zl-heading-color) !important;
+}
+
+[data-theme="dark"] .section-padding {
+  background-color: var(--zl-body-bg) !important;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #0a0a0a !important;
+}
+
+[data-theme="dark"] .navbar {
+  background-color: #000000;
+}
+
+
+
+[data-theme="dark"] .navbar.navbar-transparent {
+  background-color: transparent;
+}
+
+[data-theme="dark"] .navbar-nav .nav-link {
+  color: var(--zl-heading-color);
+}
+
+[data-theme="dark"] .wave-bottom .shape-fill {
+  fill: var(--zl-body-bg);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background-color: #111111;
+  border-color: var(--zl-border-color);
+  color: var(--zl-heading-color);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  background-color: #111111;
+  color: var(--zl-heading-color);
+  border-color: var(--zl-primary);
+}
+
+[data-theme="dark"] .accordion-item {
+  background-color: #111111;
+  border-color: var(--zl-border-color);
+}
+
+[data-theme="dark"] .accordion-button {
+  background-color: #111111;
+  color: var(--zl-heading-color);
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  background-color: #1b4332;
+  color: #fff;
+}
+
+[data-theme="dark"] .table {
+  color: var(--zl-body-color);
+}
+
+[data-theme="dark"] .table-striped>tbody>tr:nth-of-type(odd)>* {
+  color: var(--zl-body-color);
+  box-shadow: inset 0 0 0 9999px rgba(255, 255, 255, 0.05);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--zl-heading-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--zl-transition);
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle-btn i {
+  line-height: 1;
+}
+
+[data-theme="dark"] .navbar-toggler i {
+  color: #fff !important;
+}
