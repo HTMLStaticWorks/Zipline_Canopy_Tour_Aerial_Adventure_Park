@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canopy Zipline Tour Details | Zipline</title>
+    <meta name="description" content="Discover the full details of our famous Canopy Zipline Tour. View safety requirements, duration, and pricing.">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <style>
+        .service-sidebar {
+            background: var(--zl-light);
+            border-radius: var(--zl-border-radius);
+            padding: 30px;
+        }
+        .info-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--zl-border-color);
+        }
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        .video-placeholder {
+            position: relative;
+            background: #000;
+            border-radius: var(--zl-border-radius);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            background-image: url('assets/images/gallery-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .video-placeholder::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .play-icon {
+            position: relative;
+            z-index: 1;
+            font-size: 4rem;
+            color: #fff;
+            cursor: pointer;
+            transition: var(--zl-transition);
+        }
+        .play-icon:hover {
+            color: var(--zl-secondary);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-tree-fill me-2 text-secondary"></i><span>ZIPLINE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home 1 - Canopy Tour</a></li>
+                            <li><a class="dropdown-item" href="index-2.html">Home 2 - Jungle Park</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Adventures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="zipline-tours.html">Zipline Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button id="rtl-toggle" class="rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline-primary btn-nav">Log In</a>
+                    <a href="booking.html" class="btn btn-secondary btn-nav">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="background-image: url('assets/images/gallery-1.jpg');">
+        <div class="page-header-content fade-in-up">
+            <h1 class="page-header-title">Canopy Zipline Tour</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white-50">Home</a></li>
+                    <li class="breadcrumb-item"><a href="services.html" class="text-white-50">Services</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Details</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="wave-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.3,194.21,110.15,237.91,103.85,279.46,86.6,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Details Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Content -->
+                <div class="col-lg-8 fade-in-up">
+                    <img src="assets/images/gallery-1.jpg" alt="Zipline Tour" class="img-fluid rounded mb-4 shadow-sm w-100" style="height: 500px; object-fit: cover;">
+                    
+                    <h2 class="fw-bold mb-4">Tour Overview</h2>
+                    <p class="lead text-muted mb-4">Experience the thrill of flying through the upper canopy of our pristine old-growth forest. Our signature Canopy Zipline Tour is an unforgettable adventure that combines high-speed thrills with breathtaking views.</p>
+                    <p class="text-muted mb-5">The tour consists of 7 exhilarating ziplines, 2 suspended sky bridges, and a thrilling 50-foot rappel to finish. Accompanied by two highly trained guides, you'll learn about the local ecosystem while safely navigating the course.</p>
+
+                    <h3 class="fw-bold mb-4">Safety Training Video</h3>
+                    <div class="video-placeholder mb-5 shadow-sm">
+                        <i class="bi bi-play-circle-fill play-icon"></i>
+                    </div>
+
+                    <h3 class="fw-bold mb-4">Tour Highlights</h3>
+                    <ul class="row list-unstyled mb-5 text-muted">
+                        <li class="col-md-6 mb-3"><i class="bi bi-check2-circle text-primary me-2"></i> 7 massive ziplines</li>
+                        <li class="col-md-6 mb-3"><i class="bi bi-check2-circle text-primary me-2"></i> Longest zip: 1,500 feet</li>
+                        <li class="col-md-6 mb-3"><i class="bi bi-check2-circle text-primary me-2"></i> 2 suspended sky bridges</li>
+                        <li class="col-md-6 mb-3"><i class="bi bi-check2-circle text-primary me-2"></i> Highest point: 150 feet</li>
+                        <li class="col-md-6 mb-3"><i class="bi bi-check2-circle text-primary me-2"></i> 50-foot terminal rappel</li>
+                        <li class="col-md-6 mb-3"><i class="bi bi-check2-circle text-primary me-2"></i> Spectacular valley views</li>
+                    </ul>
+
+                    <h3 class="fw-bold mb-4">Frequently Asked Questions</h3>
+                    <div class="accordion mb-5" id="serviceFAQ">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What should I wear?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#serviceFAQ">
+                                <div class="accordion-body text-muted">
+                                    We recommend comfortable, athletic clothing. Closed-toe shoes are mandatory (sneakers or hiking boots). Avoid loose clothing, skirts, or dangling jewelry. Long hair must be tied back.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Are there weight and height restrictions?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#serviceFAQ">
+                                <div class="accordion-body text-muted">
+                                    Yes. For safety reasons, participants must weigh between 70 lbs and 250 lbs, and be at least 4'0" tall. We will weigh guests discretely at check-in.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Do I need to sign a waiver?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#serviceFAQ">
+                                <div class="accordion-body text-muted">
+                                    Yes, all participants must sign a digital liability waiver before the tour. Minors must have a waiver signed by a parent or legal guardian.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4 fade-in-up">
+                    <div class="service-sidebar sticky-top" style="top: 100px;">
+                        <h4 class="fw-bold border-bottom pb-3 mb-4">Tour Details</h4>
+                        <h2 class="text-primary fw-bold mb-4">$89.00 <span class="fs-6 text-muted fw-normal">/ person</span></h2>
+                        
+                        <ul class="list-unstyled info-list mb-4">
+                            <li><span class="text-muted"><i class="bi bi-clock me-2"></i> Duration</span> <span class="fw-bold">2.5 Hours</span></li>
+                            <li><span class="text-muted"><i class="bi bi-bar-chart me-2"></i> Difficulty</span> <span class="fw-bold text-success">Moderate</span></li>
+                            <li><span class="text-muted"><i class="bi bi-person me-2"></i> Min Age</span> <span class="fw-bold">10 Years</span></li>
+                            <li><span class="text-muted"><i class="bi bi-rulers me-2"></i> Min Height</span> <span class="fw-bold">4'0" (122cm)</span></li>
+                            <li><span class="text-muted"><i class="bi bi-speedometer2 me-2"></i> Weight Limit</span> <span class="fw-bold">70 - 250 lbs</span></li>
+                            <li><span class="text-muted"><i class="bi bi-people me-2"></i> Max Group</span> <span class="fw-bold">12 People</span></li>
+                        </ul>
+
+                        <div class="d-grid gap-2">
+                            <a href="booking.html" class="btn btn-primary btn-lg">Book This Tour</a>
+                            <a href="faq.html" class="btn btn-outline-secondary">Sign Waiver</a>
+                        </div>
+                        
+                        <div class="mt-4 p-3 bg-white rounded border text-center">
+                            <i class="bi bi-shield-check text-success fs-1 mb-2"></i>
+                            <h6 class="fw-bold">100% Safety Certified</h6>
+                            <p class="small text-muted mb-0">Inspected daily by certified ACCT professionals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <a class="navbar-brand fs-4 fw-bold mb-4 d-block text-white" href="index.html">
+                        <i class="bi bi-tree-fill me-2 text-secondary"></i><span>ZIPLINE</span>
+                    </a>
+                    <p class="text-white-50 mb-4">The ultimate destination for thrill-seekers and nature lovers. Experience the forest from a whole new perspective.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing & Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Our Adventures</h4>
+                    <ul class="footer-links">
+                        <li><a href="zipline-tours.html">Zipline Tours</a></li>
+                        <li><a href="services.html">Aerial Courses</a></li>
+                        <li><a href="services.html">Kids Adventures</a></li>
+                        <li><a href="booking.html">Online Booking</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li class="text-white-50 mb-3"><i class="bi bi-geo-alt me-2 text-primary"></i> 123 Adventure Park Way, Forest Hill, CA 90210</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-telephone me-2 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-envelope me-2 text-primary"></i> info@ziplinepark.com</li>
+                        <li class="text-white-50"><i class="bi bi-clock me-2 text-primary"></i> Open Daily: 9am - 6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Zipline Park. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Zipline Adventure Park</title>
+    <meta name="description" content="Browse through our photo gallery to see the excitement and natural beauty of Zipline Park. From kids' adventures to extreme canopy tours, see the action for yourself.">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <style>
+        .gallery-item {
+            position: relative;
+            border-radius: var(--zl-border-radius);
+            overflow: hidden;
+            margin-bottom: 24px;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            transition: var(--zl-transition);
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(8, 28, 21, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--zl-transition);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-overlay i {
+            color: white;
+            font-size: 2rem;
+        }
+        .filter-btn {
+            border: none;
+            background: none;
+            padding: 8px 20px;
+            font-weight: 600;
+            color: var(--zl-body-color);
+            border-radius: 50px;
+            transition: var(--zl-transition);
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--zl-primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-tree-fill me-2 text-secondary"></i><span>ZIPLINE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index-2.html">Home 2</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Adventures</a></li>
+                    <li class="nav-item"><a class="nav-link" href="zipline-tours.html">Zipline Tours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button id="rtl-toggle" class="rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline-primary btn-nav">Log In</a>
+                    <a href="booking.html" class="btn btn-secondary btn-nav">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="background-image: url('assets/images/gallery-hero.jpg');">
+        <div class="page-header-content fade-in-up">
+            <h1 class="page-header-title text-secondary">Adventures in Photos</h1>
+            <p class="lead text-white mb-4">Explore the thrill and beauty of our canopy tours through the lens.<br>Relive the moments that make Zipline Park special.</p>
+            <div class="header-divider mx-auto mt-3">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5 fade-in-up">
+                <div class="d-inline-flex gap-2 p-1 bg-light rounded-pill mb-4">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Zipline</button>
+                    <button class="filter-btn">Obstacles</button>
+                    <button class="filter-btn">Kids</button>
+                    <button class="filter-btn">Nature</button>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Gallery items -->
+                <div class="col-lg-4 col-md-6 fade-in-up">
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery-1.jpg" alt="Zipline">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="gallery-item">
+                        <img src="assets/images/gallery-2.jpg" alt="Obstacle">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="gallery-item">
+                        <img src="assets/images/tour-1.jpg" alt="Adventurer on a high-speed zipline at Zipline Park">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in-up">
+                    <div class="gallery-item">
+                        <img src="assets/images/tour-2.jpg" alt="Aerial obstacle course bridge in the forest canopy">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="gallery-item">
+                        <img src="assets/images/pricing-hero.jpg" alt="Safety gear and equipment display at Zipline Park">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="gallery-item">
+                        <img src="assets/images/zipline-tours-hero.jpg" alt="Group of happy adventurers ready for a canopy tour">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guest Moments -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 fade-in-up">
+                    <img src="assets/images/guest-experience.jpg" alt="Guest Moments" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-lg-6 fade-in-up" style="transition-delay: 0.1s;">
+                    <span class="subtitle text-primary fw-bold text-uppercase">Guest Moments</span>
+                    <h2 class="display-5 fw-bold mb-4">Capturing Smiles in the Treetops</h2>
+                    <p class="text-muted mb-4">Our guests come for the adrenaline but stay for the memories. From family high-fives to corporate team building, every moment is worth capturing.</p>
+                    <a href="contact.html" class="btn btn-primary">Book Your Group Event</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Team -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5 flex-lg-row-reverse">
+                <div class="col-lg-6 fade-in-up">
+                    <img src="assets/images/team-action.jpg" alt="Safety Team" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-lg-6 fade-in-up" style="transition-delay: 0.1s;">
+                    <span class="subtitle text-primary fw-bold text-uppercase">Our Safety Team</span>
+                    <h2 class="display-5 fw-bold mb-4">Experts Behind Your Adventure</h2>
+                    <p class="text-muted mb-4">Your safety is our #1 priority. Our certified instructors are expertly trained to ensure your gear is perfect and your experience is worry-free.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> ACCT Certified Instructors</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Daily Equipment Inspections</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Comprehensive Safety Briefings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <a class="navbar-brand fs-4 fw-bold mb-4 d-block text-white" href="index.html">
+                        <i class="bi bi-tree-fill me-2 text-secondary"></i><span>ZIPLINE</span>
+                    </a>
+                    <p class="text-white-50 mb-4">The ultimate destination for thrill-seekers and nature lovers. Experience the forest from a whole new perspective.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing & Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Our Adventures</h4>
+                    <ul class="footer-links">
+                        <li><a href="zipline-tours.html">Zipline Tours</a></li>
+                        <li><a href="services.html">Aerial Courses</a></li>
+                        <li><a href="services.html">Kids Adventures</a></li>
+                        <li><a href="booking.html">Online Booking</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li class="text-white-50 mb-3"><i class="bi bi-geo-alt me-2 text-primary"></i> 123 Adventure Park Way, Forest Hill, CA 90210</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-telephone me-2 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-envelope me-2 text-primary"></i> info@ziplinepark.com</li>
+                        <li class="text-white-50"><i class="bi bi-clock me-2 text-primary"></i> Open Daily: 9am - 6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Zipline Park. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Packages | Zipline Adventure Park</title>
+    <meta name="description" content="View our affordable pricing plans for canopy tours, aerial courses, and group events. Special rates available for families, schools, and corporate groups at Zipline Park.">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    
+    <style>
+        .pricing-card {
+            background: #fff;
+            border-radius: var(--zl-border-radius-lg);
+            padding: 40px 30px;
+            box-shadow: var(--zl-shadow);
+            border: 1px solid var(--zl-border-color);
+            transition: var(--zl-transition);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--zl-shadow-hover);
+            border-color: var(--zl-primary);
+        }
+        .pricing-card.popular {
+            border-color: var(--zl-secondary);
+            background: rgba(244, 140, 6, 0.02);
+        }
+        .pricing-card.popular::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--zl-secondary);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+        }
+        .price-val {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--zl-primary);
+            line-height: 1;
+            margin: 20px 0;
+        }
+        .price-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        .price-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--zl-border-color);
+            color: var(--zl-body-color);
+        }
+        [data-theme="dark"] .pricing-card {
+            background: #11221b;
+        }
+        [data-theme="dark"] .pricing-card.popular {
+            background: rgba(244, 140, 6, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-tree-fill me-2 text-secondary"></i><span>ZIPLINE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index-2.html">Home 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Adventures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="zipline-tours.html">Zipline Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="pricing.html">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button id="rtl-toggle" class="rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline-primary btn-nav">Log In</a>
+                    <a href="booking.html" class="btn btn-secondary btn-nav">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="background-image: url('assets/images/pricing-hero.jpg');">
+        <div class="page-header-content fade-in-up">
+            <h1 class="page-header-title text-secondary">Pricing & Packages</h1>
+            <p class="lead text-white mb-4">Choose the best value for your adventure group.<br>Special rates for schools, families, and corporate teams.</p>
+            <div class="header-divider mx-auto mt-3">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pricing Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <!-- Plan 1 -->
+                <div class="col-lg-4 col-md-6 fade-in-up">
+                    <div class="pricing-card">
+                        <h4 class="fw-bold">Kids Adventure</h4>
+                        <p class="text-muted small">Perfect for children 6-12 years old</p>
+                        <div class="price-val">$45<span class="fs-5 text-muted fw-normal">/pp</span></div>
+                        <ul class="price-list">
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> 1.5 Hour Session</li>
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> Safety Briefing & Gear</li>
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> 3 Low-Level Ziplines</li>
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> Mini Obstacle Course</li>
+                            <li class="text-muted text-decoration-line-through"><i class="bi bi-x-lg me-2"></i> Extreme High Ropes</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-outline-primary w-100 py-3 fw-bold">Book Kids Package</a>
+                    </div>
+                </div>
+                <!-- Plan 2 -->
+                <div class="col-lg-4 col-md-6 fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="pricing-card popular shadow-lg" style="transform: scale(1.05);">
+                        <h4 class="fw-bold text-secondary">Canopy Tour</h4>
+                        <p class="text-muted small">Our most popular thrilling experience</p>
+                        <div class="price-val">$89<span class="fs-5 text-muted fw-normal">/pp</span></div>
+                        <ul class="price-list">
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> 2.5 Hour Session</li>
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> Premium Safety Gear</li>
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> 7 Massive Ziplines</li>
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> 2 Sky Bridges</li>
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> 50ft Terminal Rappel</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-secondary w-100 py-3 fw-bold">Book Canopy Tour</a>
+                    </div>
+                </div>
+                <!-- Plan 3 -->
+                <div class="col-lg-4 col-md-6 fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="pricing-card">
+                        <h4 class="fw-bold">Extreme Course</h4>
+                        <p class="text-muted small">For true adrenaline junkies</p>
+                        <div class="price-val">$110<span class="fs-5 text-muted fw-normal">/pp</span></div>
+                        <ul class="price-list">
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> 3.5 Hour Session</li>
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> Advanced Safety Training</li>
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> Full Zipline Course</li>
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> 30+ Aerial Obstacles</li>
+                            <li><i class="bi bi-check-lg text-primary me-2"></i> Go-Pro Helmet Camera</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-outline-primary w-100 py-3 fw-bold">Book Extreme Package</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Add-on Services -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5 fade-in-up">
+                <span class="subtitle">Customize Your Trip</span>
+                <h2>Adventure Add-ons</h2>
+                <p class="text-muted">Make your experience even more memorable with these optional extras.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 fade-in-up">
+                    <div class="p-4 bg-white rounded-4 shadow-sm text-center h-100 border border-transparent hover-border-primary transition-all">
+                        <div class="fs-1 text-secondary mb-3"><i class="bi bi-camera"></i></div>
+                        <h4 class="fw-bold mb-3">Photo & Video Pack</h4>
+                        <p class="text-muted small mb-4">Professional high-res photos and 4K video of your entire tour.</p>
+                        <div class="fw-bold text-primary mb-0">$25.00</div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="p-4 bg-white rounded-4 shadow-sm text-center h-100 border border-transparent hover-border-primary transition-all">
+                        <div class="fs-1 text-secondary mb-3"><i class="bi bi-cup-hot"></i></div>
+                        <h4 class="fw-bold mb-3">Adventure Lunch</h4>
+                        <p class="text-muted small mb-4">A delicious packed lunch and drink to enjoy at our picnic grove.</p>
+                        <div class="fw-bold text-primary mb-0">$15.00</div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="p-4 bg-white rounded-4 shadow-sm text-center h-100 border border-transparent hover-border-primary transition-all">
+                        <div class="fs-1 text-secondary mb-3"><i class="bi bi-lightning-charge"></i></div>
+                        <h4 class="fw-bold mb-3">Fast Pass</h4>
+                        <p class="text-muted small mb-4">Skip the lines during peak hours and get more time on the lines.</p>
+                        <div class="fw-bold text-primary mb-0">$20.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center mb-5 fade-in-up">
+                        <span class="subtitle">Common Questions</span>
+                        <h2>Pricing & Booking FAQ</h2>
+                    </div>
+                    
+                    <div class="accordion accordion-flush fade-in-up" id="pricingFAQ">
+                        <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What is your cancellation policy?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+                                <div class="accordion-body text-muted">
+                                    Full refunds are provided for cancellations made at least 48 hours in advance. Cancellations within 48 hours are eligible for a partial credit or reschedule.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Do I need to book in advance?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+                                <div class="accordion-body text-muted">
+                                    We highly recommend booking in advance, especially on weekends and holidays, as slots fill up quickly. Walk-ins are subject to availability.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Are there weight or height restrictions?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#pricingFAQ">
+                                <div class="accordion-body text-muted">
+                                    Yes, for safety reasons, participants must weigh between 70 lbs and 250 lbs. Minimum height for the Canopy Tour is 4'8". Kids course has separate requirements.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Notice -->
+    <section class="pb-5">
+        <div class="container fade-in-up">
+            <div class="p-5 rounded-4 shadow-sm d-flex flex-column flex-lg-row align-items-center justify-content-between text-white" 
+                 style="background-color: var(--zl-primary);">
+                <div class="mb-4 mb-lg-0">
+                    <h3 class="fw-bold mb-2">Planning a Group Trip?</h3>
+                    <p class="mb-0 text-white-50">Groups of 5 or more receive a 10% discount. Corporate groups of 15+ receive special rates and catering options.</p>
+                </div>
+                <a href="contact.html" class="btn btn-light btn-lg px-5 fw-bold" style="color: var(--zl-primary);">Get Group Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <a class="navbar-brand fs-4 fw-bold mb-4 d-block text-white" href="index.html">
+                        <i class="bi bi-tree-fill me-2 text-secondary"></i><span>ZIPLINE</span>
+                    </a>
+                    <p class="text-white-50 mb-4">The ultimate destination for thrill-seekers and nature lovers. Experience the forest from a whole new perspective.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing & Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Our Adventures</h4>
+                    <ul class="footer-links">
+                        <li><a href="zipline-tours.html">Zipline Tours</a></li>
+                        <li><a href="services.html">Aerial Courses</a></li>
+                        <li><a href="services.html">Kids Adventures</a></li>
+                        <li><a href="booking.html">Online Booking</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li class="text-white-50 mb-3"><i class="bi bi-geo-alt me-2 text-primary"></i> 123 Adventure Park Way, Forest Hill, CA 90210</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-telephone me-2 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-envelope me-2 text-primary"></i> info@ziplinepark.com</li>
+                        <li class="text-white-50"><i class="bi bi-clock me-2 text-primary"></i> Open Daily: 9am - 6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Zipline Park. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungle Adventure Park | Zipline Adventure Park</title>
+    <meta name="description"
+        content="Dive into the heart of the jungle at Zipline Park. Explore our aerial obstacle courses, perfect for team building, school trips, and extreme adventure seekers looking for a unique outdoor challenge.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+
+    <style>
+        /* Home 2 specific overrides */
+        .hero-jungle {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            background-image: url('assets/images/zipline-tours-hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-jungle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(8, 28, 21, 0.9) 0%, rgba(45, 106, 79, 0.4) 100%);
+        }
+
+        .jungle-card {
+            border: none;
+            border-radius: var(--zl-border-radius-lg);
+            background: var(--zl-primary-dark);
+            color: white;
+            transition: var(--zl-transition);
+        }
+
+        .jungle-card:hover {
+            transform: translateY(-5px);
+            background: var(--zl-primary);
+        }
+
+        .video-play-btn {
+            width: 80px;
+            height: 80px;
+            background: var(--zl-secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: var(--zl-transition);
+            animation: pulse 2s infinite;
+        }
+
+        .video-play-btn:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(244, 140, 6, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(244, 140, 6, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(244, 140, 6, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-tree-fill me-2 text-secondary"></i><span>ZIPLINE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index-2.html">Home 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Adventures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="zipline-tours.html">Zipline Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button id="rtl-toggle" class="rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline-primary btn-nav">Log In</a>
+                    <a href="booking.html" class="btn btn-secondary btn-nav">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-jungle">
+        <div class="container position-relative z-1">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10 fade-in-up">
+                    <span class="badge bg-secondary mb-3 fs-6 px-3 py-2 rounded-pill">Welcome to the Jungle</span>
+                    <h1 class="hero-title text-white">Conquer the Ultimate Aerial Obstacle Course</h1>
+                    <p class="hero-text text-white-50 mx-auto" style="max-width: 800px;">Team building, school trips, and extreme adventure in the heart
+                        of nature. Test your agility on suspended bridges, nets, and extreme ziplines.</p>
+                    <div class="d-flex flex-wrap gap-3 align-items-center justify-content-center">
+                        <a href="login.html" class="btn btn-outline-light btn-lg btn-hero">Log In</a>
+                        <a href="booking.html" class="btn btn-primary btn-lg btn-hero">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Obstacle Showcase -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <span class="subtitle">The Challenges</span>
+                <h2>Aerial Obstacles Showcase</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 fade-in-up">
+                    <div class="text-center p-4 border rounded shadow-sm h-100 bg-white">
+                        <img src="assets/images/tour-1.jpg"
+                            class="rounded-circle mb-3 border border-3 border-secondary" width="120" height="120"
+                            alt="Swinging Logs obstacle at Zipline Park" style="object-fit: cover;">
+                        <h4 class="fw-bold">Swinging Logs</h4>
+                        <p class="text-muted small">Test your balance as you cross suspended horizontal logs 50ft in the
+                            air.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="text-center p-4 border rounded shadow-sm h-100 bg-white">
+                        <img src="assets/images/tour-2.jpg"
+                            class="rounded-circle mb-3 border border-3 border-secondary" width="120" height="120"
+                            alt="Tarzan Swing adventure at Zipline Park" style="object-fit: cover;">
+                        <h4 class="fw-bold">Tarzan Swing</h4>
+                        <p class="text-muted small">Leap from the platform and swing into the cargo net like a true
+                            jungle explorer.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="text-center p-4 border rounded shadow-sm h-100 bg-white">
+                        <img src="assets/images/guest-experience.jpg"
+                            class="rounded-circle mb-3 border border-3 border-secondary" width="120" height="120"
+                            alt="Sky Bridge crossing at Zipline Park" style="object-fit: cover;">
+                        <h4 class="fw-bold">Sky Bridge</h4>
+                        <p class="text-muted small">A narrow, wobbly wooden bridge testing your nerve over the forest
+                            canopy.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-in-up" style="transition-delay: 0.3s;">
+                    <div class="text-center p-4 border rounded shadow-sm h-100 bg-white">
+                        <img src="assets/images/gallery-2.jpg"
+                            class="rounded-circle mb-3 border border-3 border-secondary" width="120" height="120"
+                            alt="Spider Net vertical climb at Zipline Park" style="object-fit: cover;">
+                        <h4 class="fw-bold">Spider Net</h4>
+                        <p class="text-muted small">Climb your way up or down this massive vertical cargo net obstacle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Bookings & Corporate -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 fade-in-up">
+                    <img src="assets/images/team-action.jpg"
+                        alt="Corporate Team Building activities at Zipline Park" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-lg-6 fade-in-up">
+                    <span class="subtitle text-secondary fw-bold text-uppercase tracking-wider">Group Experiences</span>
+                    <h2 class="display-5 fw-bold mb-4">Perfect for Corporate Team Building</h2>
+                    <p class="lead text-muted mb-4">Escape the office and boost team morale with our specialized
+                        corporate adventure packages.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Dedicated safety
+                            instructors</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Private picnic & BBQ
+                            areas</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Custom difficulty
+                            levels</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Group discount rates
+                            (15+ people)</li>
+                    </ul>
+                    <a href="pricing.html" class="btn btn-primary">View Group Rates</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- School & Events -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4 justify-content-center fade-in-up">
+                <div class="col-lg-5">
+                    <div class="jungle-card p-5 h-100 text-center">
+                        <i class="bi bi-backpack4 fs-1 text-secondary mb-3"></i>
+                        <h3 class="fw-bold">School Trips</h3>
+                        <p class="text-white-50">Educational and physical outdoor experiences tailored for students.
+                            Special educational rates apply.</p>
+                        <a href="contact.html" class="btn btn-outline-light mt-3">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="jungle-card p-5 h-100 text-center">
+                        <i class="bi bi-balloon-heart fs-1 text-secondary mb-3"></i>
+                        <h3 class="fw-bold">Birthday Parties</h3>
+                        <p class="text-white-50">Celebrate your special day in the trees! Includes park access, party
+                            area, and special gift.</p>
+                        <a href="booking.html" class="btn btn-outline-light mt-3">Book Party</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adventure Map Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 fade-in-up">
+                    <span class="subtitle">Plan Your Route</span>
+                    <h2>Interactive Park Map</h2>
+                    <p class="text-muted mb-4">Get a bird's-eye view of our 200-acre adventure park. Our courses are color-coded by difficulty level to help you plan your day.</p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-6">
+                            <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-success">
+                                <h5 class="fw-bold mb-1">Green Zone</h5>
+                                <p class="text-muted small mb-0">Family Friendly</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-primary">
+                                <h5 class="fw-bold mb-1">Blue Zone</h5>
+                                <p class="text-muted small mb-0">Intermediate</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-dark">
+                                <h5 class="fw-bold mb-1">Black Zone</h5>
+                                <p class="text-muted small mb-0">Extreme Only</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-secondary">
+                                <h5 class="fw-bold mb-1">Zip Hub</h5>
+                                <p class="text-muted small mb-0">Central Station</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="gallery.html" class="btn btn-secondary">Download High-Res Map</a>
+                </div>
+                <div class="col-lg-6 fade-in-up">
+                    <div class="position-relative">
+                        <img src="assets/images/gallery-hero.jpg" alt="Zipline Park Interactive Map Preview" class="img-fluid rounded-4 shadow-lg">
+                        <div class="position-absolute top-50 start-50 translate-middle">
+                            <div class="video-play-btn"><i class="bi bi-geo-alt"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Placeholder -->
+    <section id="video" class="hero" style="background-image: url('assets/images/services-hero.jpg'); background-size: cover; background-position: center; min-height: 500px; position: relative; display: flex; align-items: center; justify-content: center;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+        <div class="position-relative z-1 text-center fade-in-up">
+            <a href="#" class="video-play-btn mx-auto mb-4"><i class="bi bi-play-fill"></i></a>
+            <h2 class="text-white fw-bold">Watch The Jungle Experience</h2>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <a class="navbar-brand fs-4 fw-bold mb-4 d-block text-white" href="index.html">
+                        <i class="bi bi-tree-fill me-2 text-secondary"></i><span>ZIPLINE</span>
+                    </a>
+                    <p class="text-white-50 mb-4">The ultimate destination for thrill-seekers and nature lovers. Experience the forest from a whole new perspective.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing & Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Our Adventures</h4>
+                    <ul class="footer-links">
+                        <li><a href="zipline-tours.html">Zipline Tours</a></li>
+                        <li><a href="services.html">Aerial Courses</a></li>
+                        <li><a href="services.html">Kids Adventures</a></li>
+                        <li><a href="booking.html">Online Booking</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li class="text-white-50 mb-3"><i class="bi bi-geo-alt me-2 text-primary"></i> 123 Adventure Park Way, Forest Hill, CA 90210</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-telephone me-2 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-envelope me-2 text-primary"></i> info@ziplinepark.com</li>
+                        <li class="text-white-50"><i class="bi bi-clock me-2 text-primary"></i> Open Daily: 9am - 6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Zipline Park. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Adventure | Zipline</title>
+    <meta name="description"
+        content="Secure your spot online. Book your zipline canopy tour or aerial adventure park experience today.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+
+    <style>
+        .booking-summary {
+            background: var(--zl-light);
+            border-radius: var(--zl-border-radius);
+            padding: 30px;
+            border: 1px solid var(--zl-border-color);
+        }
+
+        .form-section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--zl-border-color);
+            color: var(--zl-heading-color);
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: var(--zl-body-color);
+        }
+
+        .summary-total {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--zl-primary);
+            border-top: 2px dashed var(--zl-border-color);
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .payment-method-card {
+            border: 1px solid var(--zl-border-color);
+            border-radius: var(--zl-border-radius);
+            padding: 15px;
+            cursor: pointer;
+            transition: var(--zl-transition);
+        }
+
+        .payment-method-card:hover {
+            border-color: var(--zl-primary);
+            background-color: rgba(45, 106, 79, 0.05);
+        }
+
+        .payment-method-card.active {
+            border-color: var(--zl-primary);
+            background-color: rgba(45, 106, 79, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-tree-fill me-2 text-secondary"></i><span>ZIPLINE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown"
+                            data-bs-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home 1 - Canopy Tour</a></li>
+                            <li><a class="dropdown-item" href="index-2.html">Home 2 - Jungle Park</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Adventures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="zipline-tours.html">Zipline Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button id="rtl-toggle" class="rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline-primary btn-nav">Log In</a>
+                    <a href="booking.html" class="btn btn-secondary btn-nav">Book Now</a>
+                </div>
+            </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="background-image: url('assets/images/home-hero.jpg');">
+        <div class="page-header-content fade-in-up">
+            <h1 class="page-header-title text-secondary">Book Your Adventure</h1>
+            <p class="lead text-white mb-4">Secure your spot for the ultimate canopy tour experience.<br>Easy online booking for individuals, families, and groups.</p>
+            <div class="header-divider mx-auto mt-3">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Booking Form -->
+                <div class="col-lg-8 fade-in-up">
+                    <form class="needs-validation" novalidate action="#" method="POST">
+
+                        <!-- Step 1: Package Selection -->
+                        <div class="mb-5 bg-white p-4 rounded shadow-sm border">
+                            <h3 class="form-section-title"><i class="bi bi-1-circle text-primary me-2"></i>Select
+                                Package & Date</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="tourPackage" class="form-label fw-bold">Adventure Package</label>
+                                    <select class="form-select form-control-lg" id="tourPackage" required>
+                                        <option value="" selected disabled>Choose a tour...</option>
+                                        <option value="canopy">Canopy Zipline Tour ($89)</option>
+                                        <option value="extreme">Extreme Aerial Course ($110)</option>
+                                        <option value="kids">Kids Jungle Adventure ($45)</option>
+                                        <option value="night">Night Zipline Experience ($99)</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a tour package.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="tourDate" class="form-label fw-bold">Select Date</label>
+                                    <input type="date" class="form-control form-control-lg" id="tourDate" required>
+                                    <div class="invalid-feedback">Please choose a valid date.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="tourTime" class="form-label fw-bold">Preferred Time</label>
+                                    <select class="form-select form-control-lg" id="tourTime" required>
+                                        <option value="" selected disabled>Choose a time slot...</option>
+                                        <option value="09:00">09:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="13:30">01:30 PM</option>
+                                        <option value="15:30">03:30 PM</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="guestCount" class="form-label fw-bold">Number of Guests</label>
+                                    <input type="number" class="form-control form-control-lg" id="guestCount" min="1"
+                                        max="20" value="1" required>
+                                    <div class="form-text text-success"><i class="bi bi-info-circle me-1"></i>Groups of
+                                        5+ get an automatic 10% discount!</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Guest Details -->
+                        <div class="mb-5 bg-white p-4 rounded shadow-sm border">
+                            <h3 class="form-section-title"><i class="bi bi-2-circle text-primary me-2"></i>Lead Guest
+                                Details</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label fw-bold">First Name</label>
+                                    <input type="text" class="form-control form-control-lg" id="firstName"
+                                        placeholder="John" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label fw-bold">Last Name</label>
+                                    <input type="text" class="form-control form-control-lg" id="lastName"
+                                        placeholder="Doe" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-bold">Email Address</label>
+                                    <input type="email" class="form-control form-control-lg" id="email"
+                                        placeholder="john@example.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label fw-bold">Phone Number</label>
+                                    <input type="tel" class="form-control form-control-lg" id="phone"
+                                        placeholder="+1 (555) 000-0000" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Payment & Waivers -->
+                        <div class="mb-5 bg-white p-4 rounded shadow-sm border">
+                            <h3 class="form-section-title"><i class="bi bi-3-circle text-primary me-2"></i>Payment &
+                                Waivers</h3>
+
+                            <label class="form-label fw-bold mb-3">Select Payment Method</label>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <div class="payment-method-card active">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentMethod"
+                                                id="creditCard" checked>
+                                            <label class="form-check-label fw-bold w-100" for="creditCard">
+                                                Credit Card
+                                                <i class="bi bi-credit-card-fill float-end fs-4 text-primary"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="payment-method-card">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentMethod"
+                                                id="paypal">
+                                            <label class="form-check-label fw-bold w-100" for="paypal">
+                                                PayPal
+                                                <i class="bi bi-paypal float-end fs-4 text-primary"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card Details Placeholder -->
+                            <div class="row g-3 mb-4">
+                                <div class="col-12">
+                                    <label class="form-label fw-bold">Card Number</label>
+                                    <input type="text" class="form-control form-control-lg"
+                                        placeholder="XXXX XXXX XXXX XXXX" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Expiry Date</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="MM/YY"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">CVV</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="123" required>
+                                </div>
+                            </div>
+
+                            <!-- Waivers -->
+                            <div class="bg-light p-3 rounded mb-4 border">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="waiverCheck" required>
+                                    <label class="form-check-label text-muted" for="waiverCheck">
+                                        I confirm that all participants meet the <a href="faq.html"
+                                            target="_blank">height and weight requirements</a> (70-250 lbs).
+                                    </label>
+                                    <div class="invalid-feedback">You must acknowledge the safety requirements.</div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+                                    <label class="form-check-label text-muted" for="termsCheck">
+                                        I agree to the <a href="#" target="_blank">Terms & Conditions</a> and <a
+                                            href="#" target="_blank">Liability Waiver</a>.
+                                    </label>
+                                    <div class="invalid-feedback">You must agree to the terms and conditions.</div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-lg w-100 py-3 fs-5" type="submit">Complete Booking -
+                                $89.00</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Booking Summary Sidebar -->
+                <div class="col-lg-4 fade-in-up">
+                    <div class="booking-summary sticky-top" style="top: 100px;">
+                        <h4 class="fw-bold mb-4">Booking Summary</h4>
+
+                        <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
+                            <img src="assets/images/gallery-1.jpg"
+                                class="rounded me-3" width="60" height="60" style="object-fit: cover;"
+                                alt="Tour Thumbnail">
+                            <div>
+                                <h6 class="fw-bold mb-0" id="summaryTourName">Canopy Zipline Tour</h6>
+                                <span class="small text-muted" id="summaryTourTime">2.5 Hours • Moderate</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-item">
+                            <span class="text-muted">Date</span>
+                            <span class="fw-bold" id="summaryDate">Select a date</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="text-muted">Time</span>
+                            <span class="fw-bold" id="summaryTime">Select time</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="text-muted">Guests</span>
+                            <span class="fw-bold" id="summaryGuests">1 Adult</span>
+                        </div>
+
+                        <div class="summary-total d-flex justify-content-between align-items-center">
+                            <span>Total</span>
+                            <span id="summaryPrice">$89.00</span>
+                        </div>
+
+                        <div class="alert alert-success mt-4 mb-0 small" role="alert">
+                            <i class="bi bi-shield-lock-fill me-2"></i>Secure 256-bit SSL Checkout
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <a class="navbar-brand fs-4 fw-bold mb-4 d-block text-white" href="index.html">
+                        <i class="bi bi-tree-fill me-2 text-secondary"></i><span>ZIPLINE</span>
+                    </a>
+                    <p class="text-white-50 mb-4">The ultimate destination for thrill-seekers and nature lovers. Experience the forest from a whole new perspective.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing & Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Our Adventures</h4>
+                    <ul class="footer-links">
+                        <li><a href="zipline-tours.html">Zipline Tours</a></li>
+                        <li><a href="services.html">Aerial Courses</a></li>
+                        <li><a href="services.html">Kids Adventures</a></li>
+                        <li><a href="booking.html">Online Booking</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-widget">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li class="text-white-50 mb-3"><i class="bi bi-geo-alt me-2 text-primary"></i> 123 Adventure Park Way, Forest Hill, CA 90210</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-telephone me-2 text-primary"></i> +1 (555) 123-4567</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-envelope me-2 text-primary"></i> info@ziplinepark.com</li>
+                        <li class="text-white-50"><i class="bi bi-clock me-2 text-primary"></i> Open Daily: 9am - 6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Zipline Park. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // JS for Booking logic (Dynamic updating of summary)
+        document.addEventListener('DOMContentLoaded', () => {
+            const guestCount = document.getElementById('guestCount');
+            const tourPackage = document.getElementById('tourPackage');
+            const tourDate = document.getElementById('tourDate');
+            const tourTime = document.getElementById('tourTime');
+
+            const summaryGuests = document.getElementById('summaryGuests');
+            const summaryPrice = document.getElementById('summaryPrice');
+            const summaryDate = document.getElementById('summaryDate');
+            const summaryTime = document.getElementById('summaryTime');
+            const summaryTourName = document.getElementById('summaryTourName');
+            const submitBtn = document.querySelector('button[type="submit"]');
+
+            const prices = {
+                'canopy': 89,
+                'extreme': 110,
+                'kids': 45,
+                'night': 99
+            };
+
+            const names = {
+                'canopy': 'Canopy Zipline Tour',
+                'extreme': 'Extreme Aerial Course',
+                'kids': 'Kids Jungle Adventure',
+                'night': 'Night Zipline Experience'
+            };
+
+            function updateSummary() {
+                const count = parseInt(guestCount.value) || 1;
+                const pkg = tourPackage.value;
+                const date = tourDate.value;
+                const time = tourTime.value;
+
+                summaryGuests.textContent = `${count} Guest${count > 1 ? 's' : ''}`;
+
+                if (date) summaryDate.textContent = new Date(date).toLocaleDateString();
+                if (time) summaryTime.textContent = time;
+
+                if (pkg && prices[pkg]) {
+                    summaryTourName.textContent = names[pkg];
+                    let total = prices[pkg] * count;
+                    // Group discount
+                    if (count >= 5) {
+                        total = total * 0.9; // 10% off
+                    }
+                    summaryPrice.textContent = `$${total.toFixed(2)}`;
+                    submitBtn.textContent = `Complete Booking - $${total.toFixed(2)}`;
+                }
+            }
+
+            guestCount.addEventListener('input', updateSummary);
+            tourPackage.addEventListener('change', updateSummary);
+            tourDate.addEventListener('change', updateSummary);
+            tourTime.addEventListener('change', updateSummary);
+
+            // Payment method toggles
+            const paymentCards = document.querySelectorAll('.payment-method-card');
+            paymentCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    paymentCards.forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    this.querySelector('.form-check-input').checked = true;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
