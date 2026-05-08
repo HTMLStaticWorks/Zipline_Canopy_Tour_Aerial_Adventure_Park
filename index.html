@@ -37,8 +37,9 @@
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <!-- Desktop View: Home Dropdown -->
-                    <li class="nav-item dropdown d-none d-lg-block">
-                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown d-none d-xl-block">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Home
                         </a>
                         <ul class="dropdown-menu shadow border-0" aria-labelledby="homeDropdown">
@@ -48,10 +49,10 @@
                     </li>
 
                     <!-- Mobile View: Separate Links -->
-                    <li class="nav-item d-lg-none">
+                    <li class="nav-item d-xl-none">
                         <a class="nav-link active" href="index.html">Home 1</a>
                     </li>
-                    <li class="nav-item d-lg-none">
+                    <li class="nav-item d-xl-none">
                         <a class="nav-link" href="index-2.html">Home 2</a>
                     </li>
                     <li class="nav-item">
@@ -73,10 +74,9 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
-                    <button id="rtl-toggle" class="rtl-toggle-btn" aria-label="Toggle RTL">
-                        RTL
-                    </button>
+                <div class="d-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
+                    <button id="rtl-toggle" class="rtl-toggle-btn" aria-label="Toggle RTL"><i
+                            class="bi bi-arrow-left-right"></i></button>
                     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
                         <i class="bi bi-moon-fill"></i>
                     </button>
@@ -90,25 +90,17 @@
     <!-- Hero Section -->
     <header class="hero" style="background-image: url('assets/images/home-hero.jpg');">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 fade-in-up">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10 fade-in-up">
                     <h1 class="hero-title">Experience the Ultimate Canopy Adventure</h1>
                     <p class="hero-text">Soar through the treetops, conquer aerial obstacles, and experience nature like
                         never before. Safe, thrilling, and perfect for all ages.</p>
-                    <div class="d-flex flex-wrap gap-3">
+                    <div class="d-flex flex-wrap gap-3 justify-content-center">
                         <a href="login.html" class="btn btn-outline-light btn-lg btn-hero">Log In</a>
                         <a href="booking.html" class="btn btn-secondary btn-lg btn-hero">Book Now</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="wave-bottom">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                preserveAspectRatio="none">
-                <path
-                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.3,194.21,110.15,237.91,103.85,279.46,86.6,321.39,56.44Z"
-                    class="shape-fill"></path>
-            </svg>
         </div>
     </header>
 
@@ -153,12 +145,15 @@
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 fade-in-up">
-                    <img src="assets/images/about-hero.jpg" alt="Our Story" class="img-fluid rounded-4 shadow-lg">
+                    <img src="assets/images/about-hero.jpg" alt="Our Story"
+                        class="img-fluid rounded-4 shadow-lg story-img-reduced">
                 </div>
                 <div class="col-lg-6 fade-in-up">
                     <span class="subtitle">Our Story</span>
                     <h2>A Decade of Adventure in the Great Outdoors</h2>
-                    <p class="text-muted mb-4">Founded in 2014, Zipline Park began with a single mission: to reconnect people with nature through high-flying adventure. Today, we are proud to be the region's premier aerial destination.</p>
+                    <p class="text-muted mb-4">Founded in 2014, Zipline Park began with a single mission: to reconnect
+                        people with nature through high-flying adventure. Today, we are proud to be the region's premier
+                        aerial destination.</p>
                     <div class="row g-4 mb-4">
                         <div class="col-6">
                             <div class="d-flex align-items-center">
@@ -200,11 +195,10 @@
             </div>
             <div class="row g-4">
                 <!-- Service 1 -->
-                <div class="col-lg-4 col-md-6 fade-in-up">
-                    <div class="card-service">
-                        <img src="assets/images/gallery-1.jpg"
-                            class="card-img-top" alt="Canopy Zipline Tour">
-                        <div class="card-service-body">
+                <div class="col-lg-4 col-md-12 fade-in-up">
+                    <div class="card-service h-100">
+                        <img src="assets/images/gallery-1.jpg" class="card-img-top" alt="Canopy Zipline Tour">
+                        <div class="card-service-body d-flex flex-column h-100">
                             <div class="card-service-meta">
                                 <span><i class="bi bi-clock me-1"></i> 2.5 Hours</span>
                                 <span><i class="bi bi-bar-chart me-1"></i> Moderate</span>
@@ -217,11 +211,10 @@
                     </div>
                 </div>
                 <!-- Service 2 -->
-                <div class="col-lg-4 col-md-6 fade-in-up" style="transition-delay: 0.1s;">
-                    <div class="card-service">
-                        <img src="assets/images/gallery-2.jpg"
-                            class="card-img-top" alt="Extreme Aerial Course">
-                        <div class="card-service-body">
+                <div class="col-lg-4 col-md-12 fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="card-service h-100">
+                        <img src="assets/images/gallery-2.jpg" class="card-img-top" alt="Extreme Aerial Course">
+                        <div class="card-service-body d-flex flex-column h-100">
                             <div class="card-service-meta">
                                 <span><i class="bi bi-clock me-1"></i> 3.0 Hours</span>
                                 <span><i class="bi bi-bar-chart me-1"></i> Challenging</span>
@@ -234,11 +227,11 @@
                     </div>
                 </div>
                 <!-- Service 3 -->
-                <div class="col-lg-4 col-md-6 fade-in-up" style="transition-delay: 0.2s;">
-                    <div class="card-service">
-                        <img src="assets/images/guest-experience.jpg"
-                            class="card-img-top" alt="Kids Jungle Adventure course at Zipline Park">
-                        <div class="card-service-body">
+                <div class="col-lg-4 col-md-12 fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="card-service h-100">
+                        <img src="assets/images/guest-experience.jpg" class="card-img-top"
+                            alt="Kids Jungle Adventure course at Zipline Park">
+                        <div class="card-service-body d-flex flex-column h-100">
                             <div class="card-service-meta">
                                 <span><i class="bi bi-clock me-1"></i> 1.5 Hours</span>
                                 <span><i class="bi bi-bar-chart me-1"></i> Easy</span>
@@ -267,25 +260,38 @@
             <div class="row g-4 justify-content-center text-center">
                 <div class="col-lg-4 fade-in-up">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-primary">
-                        <img src="assets/images/testimonial-1.jpg" class="rounded-circle mb-3 shadow-sm" width="80" height="80" style="object-fit: cover;" alt="James Wilson testimonial at Zipline Park">
-                        <div class="text-secondary mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                        <p class="text-muted italic mb-4">"The best experience of my life! The Adrenaline Peak tour is a must for anyone seeking a real thrill."</p>
+                        <img src="assets/images/testimonial-1.jpg" class="rounded-circle mb-3 shadow-sm" width="80"
+                            height="80" style="object-fit: cover;" alt="James Wilson testimonial at Zipline Park">
+                        <div class="text-secondary mb-3"><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                        <p class="text-muted italic mb-4">"The best experience of my life! The Adrenaline Peak tour is a
+                            must for anyone seeking."</p>
                         <div class="fw-bold">James Wilson</div>
                     </div>
                 </div>
                 <div class="col-lg-4 fade-in-up" style="transition-delay: 0.1s;">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-primary">
-                        <img src="assets/images/testimonial-2.jpg" class="rounded-circle mb-3 shadow-sm" width="80" height="80" style="object-fit: cover;" alt="Sarah Miller testimonial at Zipline Park">
-                        <div class="text-secondary mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                        <p class="text-muted italic mb-4">"Perfect for our corporate retreat. The staff were incredibly professional and made everyone feel safe."</p>
+                        <img src="assets/images/testimonial-2.jpg" class="rounded-circle mb-3 shadow-sm" width="80"
+                            height="80" style="object-fit: cover;" alt="Sarah Miller testimonial at Zipline Park">
+                        <div class="text-secondary mb-3"><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                        <p class="text-muted italic mb-4">"Perfect for our corporate retreat. The staff were incredibly
+                            professional."</p>
                         <div class="fw-bold">Sarah Miller</div>
                     </div>
                 </div>
                 <div class="col-lg-4 fade-in-up" style="transition-delay: 0.2s;">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-bottom border-4 border-primary">
-                        <img src="assets/images/testimonial-3.jpg" class="rounded-circle mb-3 shadow-sm" width="80" height="80" style="object-fit: cover;" alt="The Robinson Family testimonial at Zipline Park">
-                        <div class="text-secondary mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                        <p class="text-muted italic mb-4">"Great family outing. My kids (8 and 11) loved the jungle course. We'll be back for sure!"</p>
+                        <img src="assets/images/testimonial-3.jpg" class="rounded-circle mb-3 shadow-sm" width="80"
+                            height="80" style="object-fit: cover;"
+                            alt="The Robinson Family testimonial at Zipline Park">
+                        <div class="text-secondary mb-3"><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                        <p class="text-muted italic mb-4">"Great family outing. My kids (8 and 11) loved the jungle
+                            course. We'll be back for sure!"</p>
                         <div class="fw-bold">The Robinson Family</div>
                     </div>
                 </div>
@@ -298,17 +304,23 @@
         <div class="container">
             <div class="row align-items-center g-5 flex-row-reverse">
                 <div class="col-lg-6 fade-in-up">
-                    <img src="assets/images/services-hero.jpg" alt="Safety First" class="img-fluid rounded-4 shadow-lg">
+                    <img src="assets/images/services-hero.jpg" alt="Safety First"
+                        class="img-fluid rounded-4 shadow-lg story-img-reduced">
                 </div>
                 <div class="col-lg-6 fade-in-up">
                     <span class="subtitle">Safety First</span>
                     <h2>Your Safety is Our Top Priority</h2>
-                    <p class="text-muted mb-4">We use state-of-the-art equipment and follow rigorous international safety standards. All our guides are professionally trained and certified.</p>
+                    <p class="text-muted mb-4">We use state-of-the-art equipment and follow rigorous international
+                        safety standards. All our guides are professionally trained and certified.</p>
                     <ul class="list-unstyled mb-4">
-                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> ACCT Certified Instructors</li>
-                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Daily Equipment Inspections</li>
-                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> High-Quality Braking Systems</li>
-                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Comprehensive Safety Briefings</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> ACCT Certified
+                            Instructors</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Daily Equipment
+                            Inspections</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> High-Quality Braking
+                            Systems</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Comprehensive Safety
+                            Briefings</li>
                     </ul>
                     <a href="pricing.html" class="btn btn-outline-primary">View Safety Rules</a>
                 </div>
@@ -326,8 +338,8 @@
                     <h2 class="display-4 fw-bold mb-4 text-white">Ready for the Adventure of a Lifetime?</h2>
                     <p class="lead mb-5">Book your tickets online and save 15% on group bookings. Spots fill up fast on
                         weekends!</p>
-                    <a href="booking.html" class="btn btn-secondary btn-lg me-3">Book Now</a>
-                    <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+                    <a href="booking.html" class="btn btn-secondary btn-lg btn-cta me-3">Book Now</a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg btn-cta">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -341,7 +353,8 @@
                     <a class="navbar-brand fs-4 fw-bold mb-4 d-block text-white" href="index.html">
                         <i class="bi bi-tree-fill me-2 text-secondary"></i><span>ZIPLINE</span>
                     </a>
-                    <p class="text-white-50 mb-4">The ultimate destination for thrill-seekers and nature lovers. Experience the forest from a whole new perspective.</p>
+                    <p class="text-white-50 mb-4">The ultimate destination for thrill-seekers and nature lovers.
+                        Experience the forest from a whole new perspective.</p>
                     <div class="d-flex gap-3">
                         <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="text-white-50 fs-4 hover-primary"><i class="bi bi-instagram"></i></a>
@@ -372,15 +385,21 @@
                 <div class="col-lg-3 col-md-6 footer-widget">
                     <h4>Contact Info</h4>
                     <ul class="footer-links">
-                        <li class="text-white-50 mb-3"><i class="bi bi-geo-alt me-2 text-primary"></i> 123 Adventure Park Way, Forest Hill, CA 90210</li>
-                        <li class="text-white-50 mb-3"><i class="bi bi-telephone me-2 text-primary"></i> +1 (555) 123-4567</li>
-                        <li class="text-white-50 mb-3"><i class="bi bi-envelope me-2 text-primary"></i> info@ziplinepark.com</li>
-                        <li class="text-white-50"><i class="bi bi-clock me-2 text-primary"></i> Open Daily: 9am - 6pm</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-geo-alt me-2 text-primary"></i> 123 Adventure
+                            Park Way, Forest Hill, CA 90210</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-telephone me-2 text-primary"></i> +1 (555)
+                            123-4567</li>
+                        <li class="text-white-50 mb-3"><i class="bi bi-envelope me-2 text-primary"></i>
+                            info@ziplinepark.com</li>
+                        <li class="text-white-50"><i class="bi bi-clock me-2 text-primary"></i> Open Daily: 9am - 6pm
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Zipline Park. All rights reserved.</p>
+                <p class="mb-0">&copy;
+                    <script>document.write(new Date().getFullYear())</script> Zipline Park. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>

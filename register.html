@@ -177,6 +177,7 @@
         .input-group .form-control {
             border: none !important;
         }
+
         [data-theme="dark"] .form-control::placeholder {
             color: rgba(255, 255, 255, 0.5) !important;
         }
@@ -185,7 +186,8 @@
 
 <body>
     <div class="auth-controls">
-        <button id="rtl-toggle" class="rtl-toggle-btn" aria-label="Toggle RTL">RTL</button>
+        <button id="rtl-toggle" class="rtl-toggle-btn" aria-label="Toggle RTL"><i
+                class="bi bi-arrow-left-right"></i></button>
         <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
             <i class="bi bi-moon-fill"></i>
         </button>
@@ -242,7 +244,7 @@
                         </label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg w-100 py-3 mb-4">Create Account</button>
+                <button type="submit" class="btn btn-primary btn-lg w-100 py-3 mb-4">Sign Up</button>
             </form>
 
             <div class="divider">OR SIGN UP WITH</div>
@@ -260,8 +262,7 @@
             </div>
 
             <p class="text-center text-muted mb-0">
-                Already have an account? <a href="login.html" class="text-primary fw-bold text-decoration-none">Log
-                    In</a>
+                Already have an account? <a href="login.html" class="text-primary fw-bold text-decoration-none">Log In</a>
             </p>
         </div>
     </div>

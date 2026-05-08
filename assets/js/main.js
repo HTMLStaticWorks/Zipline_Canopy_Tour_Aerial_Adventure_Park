@@ -120,4 +120,26 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     });
   });
+
+  // 7. Navbar Mobile Scroll Lock
+  const mainNav = document.getElementById('mainNav');
+  if (mainNav) {
+    mainNav.addEventListener('show.bs.collapse', () => {
+      document.body.style.overflow = 'hidden';
+    });
+    mainNav.addEventListener('hide.bs.collapse', () => {
+      document.body.style.overflow = '';
+    });
+    
+    // Close menu when clicking a link
+    const navLinks = mainNav.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const bsCollapse = bootstrap.Collapse.getInstance(mainNav);
+        if (bsCollapse) {
+          bsCollapse.hide();
+        }
+      });
+    });
+  }
 });
