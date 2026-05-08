@@ -50,6 +50,12 @@ body {
   color: var(--zl-body-color);
   line-height: 1.7;
   overflow-x: hidden;
+  padding-top: calc(75px + env(safe-area-inset-top, 0px)); /* offset for fixed navbar */
+}
+
+/* Auth pages have no navbar — reset the offset */
+body:has(.auth-wrapper) {
+  padding-top: 0;
 }
 
 h1,
@@ -238,12 +244,18 @@ a:focus {
   }
 }
 
-/* Navbar */
 .navbar {
   transition: var(--zl-transition);
-  padding: 15px 0;
-  z-index: 1030;
-  background-color: #fff;
+  padding: 12px 0;
+  padding-top: calc(12px + env(safe-area-inset-top, 0px));
+  z-index: 10000 !important;
+  background-color: #ffffff !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 [data-theme="dark"] .navbar-collapse {
@@ -274,22 +286,20 @@ a:focus {
 }
 
 [data-theme="dark"] .navbar {
-  background-color: var(--zl-dark);
+  background-color: #000000 !important;
   border-bottom-color: var(--zl-border-color);
 }
 
 .navbar.sticky {
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color: rgba(255, 255, 255, 0.98) !important;
   backdrop-filter: blur(10px);
-  padding: 10px 0;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1030 !important;
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 [data-theme="dark"] .navbar.sticky {
-  background-color: rgba(0, 0, 0, 0.98);
+  background-color: rgba(0, 0, 0, 0.98) !important;
 }
 
 .navbar-brand {
@@ -537,6 +547,12 @@ a:focus {
   background-position: center;
   background-attachment: fixed;
   /* Parallax effect */
+}
+
+@media (max-width: 991.98px) {
+  .hero {
+    background-attachment: scroll !important;
+  }
 }
 
 .hero::before {
